@@ -14,6 +14,7 @@
 
 #import "MLPAutoCompleteTextField.h"
 #import "MLPAutoCompletionObject.h"
+#import "MLPTableView.h"
 #import "NSString+Levenshtein.h"
 #import <QuartzCore/QuartzCore.h>
 
@@ -59,7 +60,7 @@ static NSString *kAutoCompleteTableViewHiddenKeyPath = @"autoCompleteTableView.h
 static NSString *kBackgroundColorKeyPath = @"backgroundColor";
 static NSString *kDefaultAutoCompleteCellIdentifier = @"_DefaultAutoCompleteCellIdentifier";
 @interface MLPAutoCompleteTextField ()
-@property (strong, readwrite) UITableView *autoCompleteTableView;
+@property (strong, readwrite) MLPTableView *autoCompleteTableView;
 @property (strong) NSArray *autoCompleteSuggestions;
 @property (strong) NSOperationQueue *autoCompleteSortQueue;
 @property (strong) NSOperationQueue *autoCompleteFetchQueue;
@@ -106,7 +107,7 @@ static NSString *kDefaultAutoCompleteCellIdentifier = @"_DefaultAutoCompleteCell
     
     [self setDefaultValuesForVariables];
     
-    UITableView *newTableView = [self newAutoCompleteTableViewForTextField:self];
+    MLPTableView *newTableView = [self newAutoCompleteTableViewForTextField:self];
     [self setAutoCompleteTableView:newTableView];
 }
 
@@ -773,12 +774,12 @@ withAutoCompleteString:(NSString *)string
 
 #pragma mark - Factory Methods
 
-- (UITableView *)newAutoCompleteTableViewForTextField:(MLPAutoCompleteTextField *)textField
+- (MLPTableView *)newAutoCompleteTableViewForTextField:(MLPAutoCompleteTextField *)textField
 {
     CGRect dropDownTableFrame = [self autoCompleteTableViewFrameForTextField:textField];
     
-    UITableView *newTableView = [[UITableView alloc] initWithFrame:dropDownTableFrame
-                                                             style:UITableViewStylePlain];
+    MLPTableView *newTableView = [[MLPTableView alloc] initWithFrame:dropDownTableFrame
+                                                               style:UITableViewStylePlain];
     [newTableView setDelegate:textField];
     [newTableView setDataSource:textField];
     [newTableView setScrollEnabled:YES];
