@@ -1842,6 +1842,9 @@
 					6EC979CF1D396D6100444F0F = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
+					85FF056116B0874D009A94EE = {
+						DevelopmentTeam = SX747RMNNL;
+					};
 				};
 			};
 			buildConfigurationList = 85FF055C16B0874D009A94EE /* Build configuration list for PBXProject "MLPAutoCompleteDemo" */;
@@ -2486,7 +2489,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.colemancda.MLPAutoCompleteTextField;
+				PRODUCT_BUNDLE_IDENTIFIER = com.reiteco.MLPAutoCompleteTextField;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -2528,7 +2531,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.colemancda.MLPAutoCompleteTextField;
+				PRODUCT_BUNDLE_IDENTIFIER = com.reiteco.MLPAutoCompleteTextField;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2615,6 +2618,7 @@
 		85FF059C16B0874E009A94EE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = SX747RMNNL;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MLPAutoCompleteDemo/MLPAutoCompleteDemo-Prefix.pch";
 				INFOPLIST_FILE = "MLPAutoCompleteDemo/MLPAutoCompleteDemo-Info.plist";
@@ -2623,7 +2627,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/MLPAutoCompleteDemo",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mainloop.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.reiteco.MLPAutoCompleteDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -2632,6 +2636,7 @@
 		85FF059D16B0874E009A94EE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = SX747RMNNL;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MLPAutoCompleteDemo/MLPAutoCompleteDemo-Prefix.pch";
 				INFOPLIST_FILE = "MLPAutoCompleteDemo/MLPAutoCompleteDemo-Info.plist";
@@ -2640,7 +2645,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/MLPAutoCompleteDemo",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mainloop.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.reiteco.MLPAutoCompleteDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
