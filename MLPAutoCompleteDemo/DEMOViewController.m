@@ -23,10 +23,12 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
+
     [self.view setAlpha:0];
     [UIView animateWithDuration:0.2
                           delay:0.25
-                        options:UIViewAnimationCurveEaseOut
+                        options:UIViewAnimationOptionCurveEaseOut
                      animations:^{
                          [self.view setAlpha:1.0];
                      }completion:nil];
