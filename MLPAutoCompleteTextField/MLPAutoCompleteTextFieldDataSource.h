@@ -14,6 +14,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 #import <Foundation/Foundation.h>
 
+typedef void (^AutoCompleteCompletionHandler)(NSArray *suggestions);
+
 @class MLPAutoCompleteTextField;
 @protocol MLPAutoCompleteTextFieldDataSource <NSObject>
 
@@ -29,7 +31,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
  */
 - (void)autoCompleteTextField:(MLPAutoCompleteTextField *)textField
       possibleCompletionsForString:(NSString *)string
-                 completionHandler:(void(^)(NSArray *suggestions))handler;
+                 completionHandler:(AutoCompleteCompletionHandler)handler;
 
 
 
